@@ -1,0 +1,51 @@
+
+
+void main() {
+
+Personagem personagem1 = Personagem("Dano","Octane",100) ;
+
+  print("Foi criado o personagem ${personagem1 .nome}, do tipo ${personagem1.tipo} e com vitalidade de ${personagem1._vitalidade}");
+
+  
+
+  
+
+}
+
+class Personagem{
+
+String nome;
+
+  String tipo;
+
+int _vitalidade;
+
+  Personagem(String tipo,String nome, int _vitalidade){
+
+    this.tipo= tipo;
+
+    this.nome= nome;
+
+    this._vitalidade=_vitalidade;
+
+  }
+
+  void curar(){
+
+    this._vitalidade = this._vitalidade + 10;
+
+  }
+
+   void receberDano(){
+
+     this._vitalidade = this._vitalidade - 10;
+
+   }
+
+  int get obterVitalidade{
+
+    return _vitalidade;
+
+    }
+
+  }
